@@ -117,3 +117,10 @@ body {
 	position: absolute;
 	animation: cloudMove 3s infinite alternate;
 }
+
+.sun {
+	z-index: 100;
+	top: 33vh;
+	position: absolute;
+	left: 39vw;
+}

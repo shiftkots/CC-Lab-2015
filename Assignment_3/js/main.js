@@ -25,18 +25,23 @@ var loadWeather = function(response){
 	$('.weather').text(weather);
 	$('.currentCity').val(thisCity);
 	if(humi == "rain"){
-		$('.cloud').html('<img src="img/cloud-13.png" width="200">')
-	}else if(humi == "clear"){
-		$('.cloud').html('<img src="img/cloud-15.png" width="140">')
-	}else{
-		$('.cloud').html('<img src="img/cloud-14.png" width="200">')
+		$('.cloud').html('<img src="img/cloud-13.png" width="200">');
+		$('.sun').html('<img src="img/empty-03.png" width="60">');
+	}
+	if(humi == "clear"){
+		$('.sun').html('<img src="img/SUN-02.gif" width="60">');
+		$('.cloud').html('<img src="img/empty-03.png" width="200">');
+	}
+	if(humi != "rain" && humi != "clear"){
+		$('.cloud').html('<img src="img/cloud-14.png" width="200">');
+		$('.sun').html('<img src="img/empty-03.png" width="60">');
 	}
 	if(temp >= 65 && temp <= 80){
 		$('.city').html('<img src="img/aa.gif" width="400">');
 	}else if(temp < 65){
 		$('.city').html('<img src="img/bb.gif" width="400">');
 	}else{
-		$('.city').html('<img src="img/cc.gif" width="400">')
+		$('.city').html('<img src="img/cc.gif" width="400">');
 	}
 };
 
